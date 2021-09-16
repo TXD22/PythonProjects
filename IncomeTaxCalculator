@@ -1,0 +1,12 @@
+
+#Constants
+tax_rate = 0.2
+standard_deduction = 10000.0
+deduction_per_dependent = 3000.000
+#Inputs and conversions
+gross_income = float(input("Enter Gross Income"))
+dependents = float(input("Number of Dependents"))
+#Calculations and prints
+print("Net Income=",gross_income-standard_deduction-dependents*deduction_per_dependent)
+net_income = gross_income-standard_deduction-dependents*deduction_per_dependent
+print("Income Tax=",net_income * tax_rate)
