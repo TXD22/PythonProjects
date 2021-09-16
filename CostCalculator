@@ -1,0 +1,15 @@
+
+# Initial constants
+new_videos = 3.00
+oldies = 2
+#Request the inputs
+
+new_ones = int(input("Enter the number of new videos:"))
+old_ones = int(input("Enter the number of oldies:"))
+
+# Compute the results & Display the results
+
+print("Total Cost: $",(new_ones*new_videos)+(old_ones*oldies))
+
+
+
