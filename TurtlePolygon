@@ -1,0 +1,37 @@
+
+import turtle
+sides = input("How many sides for the polygon>>") #user input/conversion
+number = int(sides)
+
+#turtle setup and manipulation
+wn = turtle.Screen()
+wn.bgcolor("lightgreen") #bg color
+mike = turtle.Turtle()
+mike.color("blue") #turtle properties
+mike.pensize(4)
+for x in range(number):
+    mike.forward(120)
+    mike.left(360 / number)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+wn.mainloop()
