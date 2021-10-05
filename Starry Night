@@ -1,0 +1,39 @@
+import turtle
+import random  # imports
+alex = turtle.Turtle()
+
+
+#first star
+def star(t):
+    for i in range(5):
+        t.color("yellow")
+        t.forward(100)
+        t.right(720 / 5)
+
+#random stars
+def draw_random_star(t):
+    r1 = random.randrange(-250, 250)
+    r2 = random.randrange(-250, 250)
+    t.penup()
+    t.goto(r1, r2)
+    t.pendown()
+    for i in range(5):
+        t.forward(100)
+        t.right(720 / 5)
+
+
+# main function
+def main():
+    alex = turtle.Turtle()
+    alex.speed(0)
+    wn = turtle.Screen()
+    alex.color("yellow")
+    wn.bgcolor("black")
+    turtle.screensize(600, 600)  # turtle setup
+    star(alex)
+    for x in range(10):
+        draw_random_star(alex)
+    wn.exitonclick()
+
+
+main()
