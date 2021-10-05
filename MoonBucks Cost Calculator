@@ -1,0 +1,56 @@
+#Moon Bucks cost calculator
+
+sprice = 2.95
+mprice = 3.50
+lprice = 4.05
+
+def main():
+    size = input("What size coffee? (s,m,or l)")
+    member = input("Are you a Rewards Member?(y or n)")
+    calculateanddisplay(size,member)
+
+
+
+def calculateanddisplay(size, member):
+    if size == "s":
+        tax = sprice * 0.06
+        subtotal = sprice + tax
+        print("Price:",sprice)
+        print("Tax:", (round(tax,2)))
+        print("Subtotal:", (round(subtotal,2)))
+        discount = sprice * 0.2
+        if member == "n":
+            print("Total:",(round(subtotal,2)))
+        if member == "y":
+            total = subtotal-discount
+            print("Discount:",(round(discount,2)))
+            print("Total:",(round(total,2)))
+    elif size == "m":
+        tax = mprice * 0.06
+        subtotal = mprice + tax
+        print("Price:",mprice)
+        print("Tax:", (round(tax,2)))
+        print("Subtotal:", (round(subtotal,2)))
+        discount = mprice * 0.2
+        if member == "n":
+            print("Total:",(round(subtotal,2)))
+        if member == "y":
+            total = subtotal-discount
+            print("Discount:",(round(discount,2)))
+            print("Total:",(round(total,2)))
+    elif size == "l":
+        tax = lprice * 0.06
+        subtotal = lprice + tax
+        print("Price:",lprice)
+        print("Tax:", (round(tax,2)))
+        print("Subtotal:", (round(subtotal,2)))
+        discount = lprice * 0.2
+        if member == "n":
+            print("Total:",(round(subtotal,2)))
+        if member == "y":
+            total = subtotal-discount
+            print("Discount:",(round(discount,2)))
+            print("Total:",(round(total,2)))
+
+
+main()
