@@ -1,0 +1,23 @@
+#Random moving turtles
+
+def main():
+    import turtle
+    wn = turtle.Screen()
+    turtle.setup(600,600)
+    alex = turtle.Turtle()
+    alex.pensize = 4
+    randommoves(alex)
+    wn.exitonclick
+
+def randommoves(t):
+    import random
+    for x in range (50):
+        randomx = random.randrange (-100,100)
+        if randomx < 0:
+            t.pencolor("red")
+        if randomx > 0:
+            t.pencolor("purple")
+        t.forward(randomx)
+        t.right(randomx)
+
+main()
