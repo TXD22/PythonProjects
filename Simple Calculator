@@ -1,0 +1,53 @@
+#Functions and conditionals
+
+# function to add
+def add(a,b):
+
+    return a + b
+#function to subtract
+def subtract(a,b):
+
+    return a - b
+#function to multiply
+def multiply(a,b):
+
+    return a * b
+#function to divide
+def divide(a,b):
+    if a and b != 0:
+
+         return a / b
+#user input
+
+
+def main():
+    a = int(input("Enter number 1:"))
+    b = int(input("Enter number 2:"))
+    return a,b
+
+
+# menu functions
+def menu():
+    choice = int(input("Enter choice: 1)Add 2)Subtract 3)Multiply 4)Divide"))
+    a,b = main()
+    if choice == 1: #add
+        add(a,b)
+        sums = add(a,b)
+        print("Sum:",a,"+",b,"=",sums)
+    elif choice == 2:
+        subtract(a,b) #subtract
+        difference = subtract(a,b)
+        print("Difference:",a,"-",b,"=",difference)
+    elif choice == 3:
+        multiply(a,b) #multiply
+        product = multiply(a,b)
+        print("Product:",a,"*",b,"=",product)
+    elif choice == 4:
+        if a or b == 0: # do not divide if any input is zero
+            print("Division by 0 is not allowed.")
+        if a and b != 0:
+            divide(a,b)
+            quotient = divide(a,b)
+            print("Quotient:",a,"/",b,"=",quotient)
+
+menu()
