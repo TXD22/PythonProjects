@@ -1,0 +1,17 @@
+#Coin flip
+
+def main():
+    import random
+    tails = 0
+    heads = 0
+    for x in range(1000): #loops
+        number = random.randrange(2)+1
+        if number == 1:
+            side = heads #add heads
+            heads += 1
+        if number == 2:
+            side = tails #add tails
+            tails += 1
+    print("You had ", heads, "heads and", tails , "tails") #print
+
+main()
