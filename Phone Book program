@@ -1,0 +1,24 @@
+def phonebook():
+##    global nalist
+##    global nulist
+    nalist = []   #list variables
+    nulist = []
+    edit = input("Would you like to enter a name and number?(y for yes or hit enter for no)") 
+    while edit != '':
+        nalist.append(input("Enter a name")) #appends values to the lists
+        nulist.append(input("Enter a number"))
+        edit = input("Would you like to add another?(y for yes or hit enter for no)") #continue
+        if edit != 'y':
+            return nalist,nulist
+
+def searchfor(nalist,nulist): #search function
+    search = input("Would you like to search for a number?(y or n)")
+    if search == 'n':
+        return
+    elif search =='y':
+        name = input("What is the name") #takes name
+        if name in nalist:
+            index = nalist.index(name) #uses index of name to find corresponding number
+            print("The number for",name,"is",nulist[index])
+        else:
+            print("Name not found")
